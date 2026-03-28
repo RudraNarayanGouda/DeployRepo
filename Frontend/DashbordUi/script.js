@@ -10,7 +10,7 @@ function logout(){
 let userId = localStorage.getItem("userId");
 if(!userId){
     alert("Login first!");
-    window.location.href = "/Frontend/loginpage/login.html";
+    window.location.href = "/loginpage/login.html";
 }
 
 // Load all tickets for the user

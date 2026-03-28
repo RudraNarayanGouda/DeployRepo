@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(!userId){
             alert("⚠️ Please login first to book tickets!");
             // Optional: redirect to login page
-            window.location.href = "/Frontend/loginpage/login.html";
+            window.location.href = "/loginpage/login.html";
             return;
         }
 
