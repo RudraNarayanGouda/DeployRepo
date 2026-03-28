@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
         navText.innerText = userName.toUpperCase();
 
         // Optional: click pe dashboard khol
-        userNav.href = "/DashbordUi/index.html";
+        userNav.href = "/Frontend/DashbordUi/index.html";
     }
 
 });

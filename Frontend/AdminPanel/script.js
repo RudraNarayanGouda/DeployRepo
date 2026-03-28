@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // If a non-admin tries to open admin page
         if (window.location.pathname.includes("/Adminpanel/")) {
             alert("🚫 Access denied! Admins only.");
-            window.location.href = "/loginpage/login.html";
+            window.location.href = "/Frontend/loginpage/login.html";
         }
     }
 
