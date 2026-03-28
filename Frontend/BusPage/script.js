@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if(!userId){
             alert("⚠️ Please login first to book ticket!");
-            window.location.href = "/loginpage/login.html";
+            window.location.href = "/Frontend/loginpage/login.html";
             return;
         }
         const from = fromInput.value.trim();

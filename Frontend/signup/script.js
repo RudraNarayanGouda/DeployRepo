@@ -57,7 +57,7 @@ document.getElementById("signupForm").addEventListener("submit", function(e) {
 
         // 🔹 Redirect to login page
         setTimeout(() => {
-            window.location.href = "/loginpage/login.html";
+            window.location.href = "/Frontend/loginpage/login.html";
         }, 1000);
     })
     .catch(err => {

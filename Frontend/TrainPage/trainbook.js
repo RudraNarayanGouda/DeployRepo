@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const userId = localStorage.getItem("userId");
         if (!userId) {
             alert("⚠️ Please login first to book tickets!");
-            window.location.href = "/loginpage/login.html"; // optional redirect
+            window.location.href = "/Frontend/loginpage/login.html"; // optional redirect
             return;
         }
 
