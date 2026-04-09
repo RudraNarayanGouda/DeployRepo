@@ -16,7 +16,7 @@
         if (!email) { alert("Please enter email"); return; }
 
         try {
-            const res = await fetch(`http://localhost:8080/users/send-otp?email=${encodeURIComponent(email)}`, {
+            const res = await fetch(`https://parivahan-ticket.onrender.com/users/send-otp?email=${encodeURIComponent(email)}`, {
                 method: "POST"
             });
             const text = await res.text();
@@ -38,7 +38,7 @@
         if (!otp) { alert("Please enter OTP"); return; }
 
         try {
-            const res = await fetch(`http://localhost:8080/users/verify-otp?email=${encodeURIComponent(resetEmail)}&code=${encodeURIComponent(otp)}&newPassword=dummy123`, {
+            const res = await fetch(`https://parivahan-ticket.onrender.com/users/verify-otp?email=${encodeURIComponent(resetEmail)}&code=${encodeURIComponent(otp)}&newPassword=dummy123`, {
                 method: "POST"
             });
             const text = await res.text();
