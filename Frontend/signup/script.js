@@ -40,7 +40,7 @@ document.getElementById("signupForm").addEventListener("submit", function(e) {
     const payload = { name, email, password, role: "USER" };
 
     // 🔹 Call backend API
-    fetch("http://localhost:8080/users", {
+    fetch("https://parivahan-ticket.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

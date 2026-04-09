@@ -15,7 +15,7 @@ if(!userId){
 
 // Load all tickets for the user
 function loadTickets(){
-    fetch(`http://localhost:8080/tickets/user/${userId}`)
+    fetch(`https://parivahan-ticket.onrender.com/tickets/user/${userId}`)
     .then(res => res.json())
     .then(data => {
         const container = document.getElementById("ticketList");
@@ -65,7 +65,7 @@ function loadTickets(){
 
 // ================= UPDATE STATUS =================
 function updateStatus(id, status){
-    fetch(`http://localhost:8080/tickets/${id}/status?status=${status}`, { method:"PUT" })
+    fetch(`https://parivahan-ticket.onrender.com/tickets/${id}/status?status=${status}`, { method:"PUT" })
     .then(()=>loadTickets());
 }
 
@@ -86,7 +86,7 @@ function updateTicket(id){
         date: dateInput ? dateInput.value : "" // Only single date
     };
 
-    fetch(`http://localhost:8080/tickets/${id}`, {
+    fetch(`https://parivahan-ticket.onrender.com/tickets/${id}`, {
         method:"PUT",
         headers:{"Content-Type":"application/json"},
         body: JSON.stringify(payload)
@@ -105,14 +105,14 @@ function updateTicket(id){
 // ================= CANCEL TICKET =================
 function cancelTicket(id){
     if(!confirm("Are you sure you want to cancel this ticket?")) return;
-    fetch(`http://localhost:8080/tickets/${id}/status?status=CANCELLED`, { method:"PUT" })
+    fetch(`https://parivahan-ticket.onrender.com/tickets/${id}/status?status=CANCELLED`, { method:"PUT" })
     .then(()=>loadTickets());
 }
 
 // ================= DELETE TICKET =================
 function deleteTicket(id){
     if(confirm("Are you sure?")){
-        fetch(`http://localhost:8080/tickets/${id}`, { method:"DELETE" })
+        fetch(`https://parivahan-ticket.onrender.com/tickets/${id}`, { method:"DELETE" })
         .then(()=>loadTickets());
     }
 }
@@ -124,7 +124,7 @@ function showUpdateForm(id){
 
 // ================= PDF DOWNLOAD =================
 function downloadTicket(ticketId){
-    fetch(`http://localhost:8080/tickets/${ticketId}`)
+    fetch(`https://parivahan-ticket.onrender.com/tickets/${ticketId}`)
     .then(res=>res.json())
     .then(ticket=>{
         const { jsPDF } = window.jspdf;

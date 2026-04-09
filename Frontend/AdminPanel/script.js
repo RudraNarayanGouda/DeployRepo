@@ -40,7 +40,7 @@ function showSection(section) {
 
 // Load all tickets for table (admin only)
 function loadTickets() {
-    fetch("http://localhost:8080/tickets/admin")
+    fetch("https://parivahan-ticket.onrender.com/tickets/admin")
         .then(res => res.json())
         .then(data => {
             allTickets = data;
@@ -96,7 +96,7 @@ function updateStats(tickets) {
 
 // Load dashboard stats
 function loadStats() {
-    fetch("http://localhost:8080/tickets/admin")
+    fetch("https://parivahan-ticket.onrender.com/tickets/admin")
         .then(res => res.json())
         .then(tickets => {
             const totalTickets = tickets.length;
@@ -108,7 +108,7 @@ function loadStats() {
             document.getElementById("totalRevenue").innerText = revenue;
         });
 
-    fetch("http://localhost:8080/users")
+    fetch("https://parivahan-ticket.onrender.com/users")
         .then(res => res.json())
         .then(users => {
             document.getElementById("totalUsers").innerText = users.length;

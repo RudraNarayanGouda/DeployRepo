@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     const email = document.getElementById("email").value; // अगर name use कर रहे हो तो same रखो
     const password = document.getElementById("password").value;
 
-    fetch("http://localhost:8080/users/login", {
+    fetch("https://parivahan-ticket.onrender.com/users/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

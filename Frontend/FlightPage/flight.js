@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             type: "Flight"
         };
 
-        fetch(`http://localhost:8080/tickets?userId=${userId}`, {
+        fetch(`https://parivahan-ticket.onrender.com/tickets?userId=${userId}`, {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(ticket)

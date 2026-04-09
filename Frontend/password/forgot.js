@@ -64,7 +64,7 @@
         if (newPass !== confirm) { alert("Passwords do not match"); return; }
 
         try {
-            const res = await fetch("http://localhost:8080/users/reset-password", {
+            const res = await fetch("https://parivahan-ticket.onrender.com/users/reset-password", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: resetEmail, otp: resetOtp, newPassword: newPass })
